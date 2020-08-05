@@ -1,4 +1,10 @@
 @extends('layouts.app')
+@section('meta_discription')
+Saya Software Engineer berasal dari Indonesia, dengan bahasa pemrograman utama PHP suka bekerja dengan framework Laravel selain senang di bagian Backend juga senang dalam bagian Frontend, selain ngoding saya juga senang menulis artikel dari pengetahuan yang sudah saya pelajari. selain PHP ada Beberapa teknologi yang saya sukai seperti ReactJS, Pyhthon (Django)
+@endsection
+@section('meta_author')
+    Abd. Asis
+@endsection
 @section('title')
     The Journey To a Great Programmer
 @endsection

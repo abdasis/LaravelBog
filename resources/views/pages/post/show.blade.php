@@ -1,5 +1,10 @@
 @extends('layouts.app')
+@section('meta_description')
 
+@endsection
+@section('meta_author')
+
+@endsection
 @section('title')
     {{ $post->judul_artikel }}
 @endsection
