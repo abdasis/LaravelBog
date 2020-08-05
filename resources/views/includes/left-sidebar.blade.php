@@ -1,4 +1,4 @@
-<div class="col-md-3">
+<div class="col-md-3 col-sm-12">
     <div class="card mt-3 shadow-md">
         <img src="{{ asset('/assets/images/asis.jpg') }}" alt="" class="img-profil align-self-center rounded-circle">
         <div class="card-title text-center pb-0">

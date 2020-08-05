@@ -10,10 +10,10 @@
                         <li class="list-inline-item text-dark">
                             Social :
                         </li>
-                        <li class="list-inline-item"><a href="#"><i class="mdi mdi-facebook"></i></a></li>
-                        <li class="list-inline-item"><a href="#"><i class="mdi mdi-twitter"></i></a></li>
-                        <li class="list-inline-item"><a href="#"><i class="mdi mdi-instagram"></i></a></li>
-                        <li class="list-inline-item"><a href="#"><i class="mdi mdi-google-plus"></i></a></li>
+                        <li class="list-inline-item"><a href="https://facebook.com/abdasispif"><i class="mdi mdi-facebook font-20"></i></a></li>
+                        <li class="list-inline-item"><a href="https://twitter.com/idabdasis"><i class="mdi mdi-twitter font-20"></i></a></li>
+                        <li class="list-inline-item"><a href="https://instagram.com/idabdasis"><i class="mdi mdi-instagram font-20"></i></a></li>
+                        <li class="list-inline-item"><a href="https://github.com/abdasis"><i class="mdi mdi-github-face font-20"></i></a></li>
                     </ul>
                 </div>
             </div>
