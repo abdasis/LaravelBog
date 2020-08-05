@@ -25,4 +25,6 @@ Route::resource('posts', 'PostController')->except([
 Route::get('/{artikel}', 'PostController@show')->name('posts.show');
 
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', function(){
+    return redirect('posts');
+})->name('home');

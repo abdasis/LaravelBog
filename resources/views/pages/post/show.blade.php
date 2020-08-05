@@ -76,9 +76,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/github-g
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
 <script>
-hljs.initHighlightingOnLoad({
-    singleLine: true
-});
+    hljs.initHighlightingOnLoad({
+        singleLine: true
+    });
 </script>
 @endsection
 
