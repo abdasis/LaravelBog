@@ -1,27 +1,16 @@
 @extends('layouts.app')
-@section('meta_discription')
-{{ Str::limit(strip_tags($post->isi_artikel), 160, '.') }}
-@endsection
-@section('meta_author')
-Abd. Asis
-@endsection
-@section('og_title')
-{{ strip_tags($post->judul_artikel) }}
-@endsection
-@section('og_discription')
-{{ Str::limit(strip_tags($post->isi_artikel), 160, '.') }}
-@endsection
-@section('og_thumbnail')
-{{ asset('thumbnail-artikel/') .'/'.$post->thumbnail_artikel }}
-@endsection
-@section('og_site_name')
-The Journey To a Greate Programmer
-@endsection
-@section('og_url')
-{{ url('/') . '/' . $post->slug }}
+@section('meta_description')
+<meta property="og:title" content="{{ strip_tags($post->judul_artikel) }}" />
+<meta property="og:type" content="article" />
+<meta property="og:description" content="@yield('{{ Str::limit(strip_tags($post->isi_artikel), 160, '.') }}')" />
+<meta property="og:image" content="{{ asset('thumbnail-artikel/') .'/'.$post->thumbnail_artikel }}" />
+<meta property="og:url" content="{{ strip_tags(url('/') . '/' . $post->slug) }}" />
+<meta property="og:site_name" content="The Journey To a Greate Programmer"/>
+<meta content="{{ Str::limit(strip_tags($post->isi_artikel), 160, '.') }}" name="description" />
+<meta content="Abd. Asis" name="author" />
 @endsection
 @section('title')
-{{ $post->judul_artikel }}
+{{ strip_tags($post->judul_artikel) }}
 @endsection
 @section('content')
 <section class="artikel">
