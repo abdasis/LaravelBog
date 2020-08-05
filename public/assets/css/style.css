@@ -730,7 +730,7 @@ header {
 .logo-group {
     width: 40px;
     height: 40px;
-    object-fit: scale-down;
+    object-fit: cover;
     object-position: center;
     border: 1px solid #d3d9e2;
 }
