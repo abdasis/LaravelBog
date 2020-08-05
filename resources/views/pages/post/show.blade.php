@@ -15,6 +15,9 @@ Abd. Asis
 {{ asset('thumbnail-artikel/') .'/'.$post->thumbnail_artikel }}
 @endsection
 @section('og_site_name')
+The Journey To a Greate Programmer
+@endsection
+@section('og_url')
 {{ url('/') . '/' . $post->slug }}
 @endsection
 @section('title')
