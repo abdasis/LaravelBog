@@ -1,12 +1,24 @@
 @extends('layouts.app')
-@section('meta_description')
-
+@section('meta_discription')
+{{ Str::limit(strip_tags($post->isi_artikel), 160, '.') }}
 @endsection
 @section('meta_author')
-
+Abd. Asis
+@endsection
+@section('og_title')
+{{ strip_tags($post->judul_artikel) }}
+@endsection
+@section('og_discription')
+{{ Str::limit(strip_tags($post->isi_artikel), 160, '.') }}
+@endsection
+@section('og_thumbnail')
+{{ asset('thumbnail-artikel/') .'/'.$post->thumbnail_artikel }}
+@endsection
+@section('og_site_name')
+{{ url('/') . '/' . $post->slug }}
 @endsection
 @section('title')
-    {{ $post->judul_artikel }}
+{{ $post->judul_artikel }}
 @endsection
 @section('content')
 <section class="artikel">

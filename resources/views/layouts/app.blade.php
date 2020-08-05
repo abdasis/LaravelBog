@@ -6,6 +6,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="@yield('meta_discription')" name="description" />
         <meta content="@yield('meta_author')" name="author" />
+        <meta property="og:title" content="@yield('og_title')" />
+        <meta property="og:type" content="article" />
+        <meta property="og:description" content="@yield('og_discription')" />
+        <meta property="og:image" content="@yield('og_thumbnail')" />
+        <meta property="og:url" content="@yield('og_url')" />
+        <meta property="og:site_name" content="@yield('og_site_name')"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <!-- App favicon -->
         <link rel="shortcut icon" href="{{ url('/') }}/assets/images/favicon.ico">
