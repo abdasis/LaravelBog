@@ -15,6 +15,7 @@
                     <table class="table table-bordered table-striped table-sm" id="myTable">
                         <thead>
                             <tr>
+                                <th>#</th>
                                 <th>Judul</th>
                                 <th>Status</th>
                                 <th>Dibuat</th>
@@ -22,14 +23,21 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($posts as $post)
+                            @foreach ($posts as $key => $post)
                             <tr>
+                                <td>
+                                    {{ $key+1 }}
+                                </td>
                                 <td>
                                     {{ $post->judul_artikel }}
                                 </td>
-                                <td>{{ $post->status }}</td>
+                                <td>{{ $post->status_artikel }}</td>
                                 <td>{{ date('d-m-Y', strtotime($post->created_at)) }}</td>
-                                <td>[Edit | Hapus]</td>
+                                <td>
+                                    <a href="{{ route('posts.edit', $post->slug) }}">
+                                    <button class="btn btn-sm btn-warning"><i class="mdi mdi-pencil"></i>Edit</button>
+                                    </a>
+                                </td>
                             </tr>
                             @endforeach
                         </tbody>

@@ -42,9 +42,9 @@
                         <div class="form-group">
                             <label>Pilih Status</label>
                             <select id="status_artikel" name="status_artikel" class="form-control">
-                                <option>Drafted</option>
-                                <option>Published</option>
-                                <option>Featured</option>
+                                <option {{ $post->status_artikel == 'Drafted' ? 'selected' : '' }} value="Dafted">Drafted</option>
+                                <option {{ $post->status_artikel == 'Published' ? 'selected' : '' }} value="Published">Published</option>
+                                <option {{ $post->status_artikel == 'Featured' ? 'selected' : '' }} value="Featured">Featured</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -52,10 +52,10 @@
                             <select id="status_artikel" name="kategori_artikel" class="form-control">
                                 <option value="">Pilih Kategori</option>
                                 <option {{ $post->kategori_artikel == 'ReactJS' ? 'selected' : '' }} value="ReactJS">ReactJS</option>
-                                <option {{ $post->kategori_artikel == 'PHP Programing' ? 'selected' : '' }} value="PHP Programing"></option>
-                                <option {{ $post->kategori_artikel == 'Laravel' ? 'selected' : '' }} value="Laravel"></option>
-                                <option {{ $post->kategori_artikel == 'Bootstrap' ? 'selected' : '' }} value="Bootstrap"></option>
-                                <option {{ $post->kategori_artikel == 'JQuery' ? 'selected' : '' }} value="JQuery"></option>
+                                <option {{ $post->kategori_artikel == 'PHP Programing' ? 'selected' : '' }} value="PHP Programing">PHP Programing</option>
+                                <option {{ $post->kategori_artikel == 'Laravel' ? 'selected' : '' }} value="Laravel">Laravel</option>
+                                <option {{ $post->kategori_artikel == 'Bootstrap' ? 'selected' : '' }} value="Bootstrap">Bootstrap</option>
+                                <option {{ $post->kategori_artikel == 'JQuery' ? 'selected' : '' }} value="JQuery">JQuery</option>
                             </select>
                         </div>
 
