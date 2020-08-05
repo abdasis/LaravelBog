@@ -55,7 +55,7 @@ Saya Software Engineer berasal dari Indonesia, dengan bahasa pemrograman utama P
                         <img class="card-img-top img-post-thumbnail" src="{{ asset('thumbnail-artikel/') .'/'.$post->thumbnail_artikel }}" alt="Card image cap">
                         <div class="card-body">
                             <div class="card-text">
-                                {!! Str::limit($post->isi_artikel, 250) !!}
+                                {!! Str::limit(strip_tags($post->isi_artikel), 250) !!}
 
                             </div>
                             <div class="card-text mt-2">
