@@ -19,9 +19,10 @@ Auth::routes([
 ]);
 Route::get('/', 'PostController@home')->name('beranda');
 Route::post('/posts/upload', 'PostController@upload')->name('posts.upload')->middleware('auth');
-Route::get('/{artikel}', 'PostController@show')->name('posts.show');
 Route::resource('posts', 'PostController')->except([
     'show',
 ])->middleware('auth');
+Route::get('/{artikel}', 'PostController@show')->name('posts.show');
+
 
 Route::get('/home', 'HomeController@index')->name('home');
