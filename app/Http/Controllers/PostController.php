@@ -159,6 +159,9 @@ class PostController extends Controller
     public function destroy($id)
     {
         $post = Post::find($id);
+        if ($post->thumbnail_artikel  && file_exists(public_path('thumbnail-artikel') . '/' . $post->thumbnail_artikel)) {
+            File::delete(public_path('thumbnail-artikel') . $post->thumbnail_artikel);
+        }
         $post->delete();
         Session::flash('status', 'Satu Artikel Berhasil di Hapus');
         return redirect()->back();

@@ -34,9 +34,19 @@
                                 <td>{{ $post->status_artikel }}</td>
                                 <td>{{ date('d-m-Y', strtotime($post->created_at)) }}</td>
                                 <td>
-                                    <a href="{{ route('posts.edit', $post->slug) }}">
-                                    <button class="btn btn-sm btn-warning"><i class="mdi mdi-pencil"></i>Edit</button>
-                                    </a>
+                                    <div class="row px-2 justify-content-center">
+                                        <a href="{{ route('posts.edit', $post->slug) }}">
+                                            <button class="btn btn-sm btn-warning mr-1"><i class="mdi mdi-pencil mr-1"></i>Edit</button>
+                                        </a>
+
+                                        <form action="{{ route('posts.destroy', $post->id) }}" method="post" onsubmit="return confirm('Yakin ingin menghapus data ini?')">
+                                            @method('DELETE')
+                                            @csrf
+                                            <button class="btn btn-sm btn-danger"><i class="mdi mdi-delete mr-1"></i>Hapus</button>
+                                        </form>
+                                    </div>
+
+
                                 </td>
                             </tr>
                             @endforeach
