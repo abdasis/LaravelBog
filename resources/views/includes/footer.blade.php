@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="float-left pull-none">
-                    <p class="text-dark">2015 - {{ date('Y') }} © Arah Indonesia. Design by <a href="https://harvasoft.com/" target="_blank" class="text-white-50">Harvasoft</a> </p>
+                    <p class="text-dark">{{ date('Y') }} © Made with <i class="mdi mdi-heart text-danger"></i> by <a href="https://faceboo.com/abdasispif" target="_blank" class="text-blue">Abd. Asis</a> </p>
                 </div>
                 <div class="float-right pull-none">
                     <ul class="list-inline text-dark">

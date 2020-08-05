@@ -2,10 +2,10 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>Blog CMS by Abd. Asis</title>
+        <title> @yield('title') | Abd. Asis</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
-        <meta content="Coderthemes" name="author" />
+        <meta content="Saya Software Engineer berasal dari Indonesia, dengan bahasa pemrograman utama PHP suka bekerja dengan framework Laravel selain senang di bagian Backend juga senang dalam bagian Frontend, selain ngoding saya juga senang menulis artikel dari pengetahuan yang sudah saya pelajari. selain PHP ada Beberapa teknologi yang saya sukai seperti ReactJS, Pyhthon (Django)" name="description" />
+        <meta content="Abd. Asis" name="author" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
         <!-- App favicon -->
@@ -47,6 +47,8 @@
 
         @yield('js')
         <!-- custom js -->
+        <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5f2a9f204211fc0012520e87&product=sop' async='async'></script>
+
         <script src="{{ url('/') }}/assets/js/app.js"></script>
     </body>
 

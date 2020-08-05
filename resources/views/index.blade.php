@@ -1,5 +1,7 @@
 @extends('layouts.app')
-
+@section('title')
+    The Journey To a Great Programmer
+@endsection
 @section('content')
 <section class="artikel">
     <div class="container-fluid">

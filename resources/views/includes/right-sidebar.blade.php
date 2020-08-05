@@ -1,6 +1,6 @@
 <div class="col-md-3 mt-2">
                 <div class="container">
-                    <h3 class="text-black">#Kategori</h3>
+                    <h3 class="text-black"><i class="mdi mdi-library-books mr-1"></i>Kategori</h3>
                     <ul class="list-unstyled">
                         <li class="link-category">
                             <a class="font-18 text-black-50 font-weight-semibold" href="{{ route('beranda', ['kategori' => 'ReactJs']) }}">
