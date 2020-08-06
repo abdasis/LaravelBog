@@ -8,6 +8,9 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Str;
+use Spatie\Analytics\AnalyticsFacade as Analytics;
+use Spatie\Analytics\Period;
+
 class PostController extends Controller
 {
 
@@ -42,8 +45,12 @@ class PostController extends Controller
      */
     public function index()
     {
+        $googleAnalytics = [
+            'analyticsData' => Analytics::fetchMostVisitedPages(Period::days(7)),
+            'totalVisitor' => Analytics::fetchTotalVisitorsAndPageViews(Period::days(7)),
+        ];
         $posts = Post::all();
-        return view('pages.post.index')->withPosts($posts);
+        return view('pages.post.index')->withPosts($posts)->withAnalytics($googleAnalytics);
     }
 
     /**

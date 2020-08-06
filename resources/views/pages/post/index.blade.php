@@ -3,6 +3,17 @@
     Daftar Artikel
 @endsection
 @section('content')
+    <div class="row">
+        <div class="col-md-8">
+            <div class="row">
+                <div class="col-md-4">
+                    {{ dd($analytics['totalVisitor']) }}
+                </div>
+                <div class="col-md-4"></div>
+                <div class="col-md-4"></div>
+            </div>
+        </div>
+    </div>
     <div class="row justify-content-center" style="margin-top: 150px">
         <div class="col-md-8">
             <div class="card shadow-md">

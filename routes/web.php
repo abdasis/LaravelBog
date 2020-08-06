@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use Spatie\Analytics\Period;
+use Illuminate\Support\Collection;
 
 /*
 |--------------------------------------------------------------------------
