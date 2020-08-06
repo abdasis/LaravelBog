@@ -15,6 +15,7 @@
         @yield('css')
         <!-- Custom  sCss -->
         <link rel="stylesheet" type="text/css" href="{{ url('/') }}/assets/css/style.css" />
+        <link rel="stylesheet" type="text/css" href="{{ url('/') }}/css/jquery.scrollbar.css" />
 
     </head>
 
@@ -46,6 +47,13 @@
         <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5f2a9f204211fc0012520e87&product=sop' async='async'></script>
 
         <script src="{{ url('/') }}/assets/js/app.js"></script>
+        <script src="{{ url('/') }}/js/jquery.scrollbar.min.js"></script>
+        <script>
+            jQuery(document).ready(function(){
+                jQuery('.scrollbar-dynamic').scrollbar();
+
+            });
+        </script>
     </body>
 
 </html>
