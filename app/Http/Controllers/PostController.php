@@ -45,10 +45,6 @@ class PostController extends Controller
      */
     public function index()
     {
-        $googleAnalytics = [
-            'analyticsData' => Analytics::fetchMostVisitedPages(Period::days(7)),
-            'totalVisitor' => Analytics::fetchTotalVisitorsAndPageViews(Period::days(7)),
-        ];
         $posts = Post::all();
         return view('pages.post.index')->withPosts($posts);
     }
