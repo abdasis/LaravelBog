@@ -50,7 +50,7 @@ class PostController extends Controller
             'totalVisitor' => Analytics::fetchTotalVisitorsAndPageViews(Period::days(7)),
         ];
         $posts = Post::all();
-        return view('pages.post.index')->withPosts($posts)->withAnalytics($googleAnalytics);
+        return view('pages.post.index')->withPosts($posts);
     }
 
     /**
