@@ -92,6 +92,7 @@ class ComposerStaticInit5e95155516e1ba46c85427289afdf013
             'Symfony\\Component\\CssSelector\\' => 30,
             'Symfony\\Component\\Console\\' => 26,
             'Symfony\\Component\\Cache\\' => 24,
+            'Spatie\\DbDumper\\' => 16,
             'Spatie\\Analytics\\' => 17,
         ),
         'R' => 
@@ -331,6 +332,10 @@ class ComposerStaticInit5e95155516e1ba46c85427289afdf013
         'Symfony\\Component\\Cache\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/cache',
+        ),
+        'Spatie\\DbDumper\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/spatie/db-dumper/src',
         ),
         'Spatie\\Analytics\\' => 
         array (
@@ -16105,6 +16110,16 @@ class ComposerStaticInit5e95155516e1ba46c85427289afdf013
         'Spatie\\Analytics\\Exceptions\\InvalidConfiguration' => __DIR__ . '/..' . '/spatie/laravel-analytics/src/Exceptions/InvalidConfiguration.php',
         'Spatie\\Analytics\\Exceptions\\InvalidPeriod' => __DIR__ . '/..' . '/spatie/laravel-analytics/src/Exceptions/InvalidPeriod.php',
         'Spatie\\Analytics\\Period' => __DIR__ . '/..' . '/spatie/laravel-analytics/src/Period.php',
+        'Spatie\\DbDumper\\Compressors\\Compressor' => __DIR__ . '/..' . '/spatie/db-dumper/src/Compressors/Compressor.php',
+        'Spatie\\DbDumper\\Compressors\\GzipCompressor' => __DIR__ . '/..' . '/spatie/db-dumper/src/Compressors/GzipCompressor.php',
+        'Spatie\\DbDumper\\Databases\\MongoDb' => __DIR__ . '/..' . '/spatie/db-dumper/src/Databases/MongoDb.php',
+        'Spatie\\DbDumper\\Databases\\MySql' => __DIR__ . '/..' . '/spatie/db-dumper/src/Databases/MySql.php',
+        'Spatie\\DbDumper\\Databases\\PostgreSql' => __DIR__ . '/..' . '/spatie/db-dumper/src/Databases/PostgreSql.php',
+        'Spatie\\DbDumper\\Databases\\Sqlite' => __DIR__ . '/..' . '/spatie/db-dumper/src/Databases/Sqlite.php',
+        'Spatie\\DbDumper\\DbDumper' => __DIR__ . '/..' . '/spatie/db-dumper/src/DbDumper.php',
+        'Spatie\\DbDumper\\Exceptions\\CannotSetParameter' => __DIR__ . '/..' . '/spatie/db-dumper/src/Exceptions/CannotSetParameter.php',
+        'Spatie\\DbDumper\\Exceptions\\CannotStartDump' => __DIR__ . '/..' . '/spatie/db-dumper/src/Exceptions/CannotStartDump.php',
+        'Spatie\\DbDumper\\Exceptions\\DumpFailed' => __DIR__ . '/..' . '/spatie/db-dumper/src/Exceptions/DumpFailed.php',
         'Stringable' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Stringable.php',
         'Symfony\\Component\\Cache\\Adapter\\AbstractAdapter' => __DIR__ . '/..' . '/symfony/cache/Adapter/AbstractAdapter.php',
         'Symfony\\Component\\Cache\\Adapter\\AbstractTagAwareAdapter' => __DIR__ . '/..' . '/symfony/cache/Adapter/AbstractTagAwareAdapter.php',
