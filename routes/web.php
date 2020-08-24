@@ -21,16 +21,12 @@ Auth::routes([
 ]);
 Route::get('/', 'PostController@home')->name('beranda');
 Route::post('/posts/upload', 'PostController@upload')->name('posts.upload')->middleware('auth');
-Route::get('backup', function(){
-    Spatie\DbDumper\Databases\MySql::create()
-    ->setDbName('cms-blog')
-    ->setUserName('root')
-    ->setPassword('')
-    ->dumpToFile('dump.sql');
-})->middleware('auth');
 Route::resource('posts', 'PostController')->except([
     'show',
 ])->middleware('auth');
+Route::get('logbook/{logbook}/selesai', 'LogBookController@selesai')->name('logbook.selesai')->middleware('auth');
+Route::get('logbook/laporan', 'LogBookController@lapor')->name('logbook.lapor')->middleware('auth');
+Route::resource('logbook', 'LogBookController')->middleware('auth');
 Route::get('/{artikel}', 'PostController@show')->name('posts.show');
 
 

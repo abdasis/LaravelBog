@@ -16,7 +16,6 @@ class CreateLogBooksTable extends Migration
         Schema::create('log_books', function (Blueprint $table) {
             $table->id();
             $table->string('tugas', 100);
-            $table->string('keterangan', 100)->nullable();
             $table->string('status', 100);
             $table->timestamps();
         });
