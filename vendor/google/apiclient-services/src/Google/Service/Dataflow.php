@@ -56,6 +56,7 @@ class Google_Service_Dataflow extends Google_Service
   public $projects_locations_jobs_debug;
   public $projects_locations_jobs_messages;
   public $projects_locations_jobs_snapshots;
+  public $projects_locations_jobs_stages;
   public $projects_locations_jobs_workItems;
   public $projects_locations_snapshots;
   public $projects_locations_sql;
@@ -94,11 +95,11 @@ class Google_Service_Dataflow extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'snapshotId' => array(
+                'location' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'location' => array(
+                'snapshotId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -212,6 +213,14 @@ class Google_Service_Dataflow extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'filter' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
                 'location' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -224,14 +233,6 @@ class Google_Service_Dataflow extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'filter' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'pageSize' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
               ),
             ),'create' => array(
               'path' => 'v1b3/projects/{projectId}/jobs',
@@ -242,7 +243,7 @@ class Google_Service_Dataflow extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'replaceJobId' => array(
+                'location' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -250,7 +251,7 @@ class Google_Service_Dataflow extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'location' => array(
+                'replaceJobId' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -292,11 +293,11 @@ class Google_Service_Dataflow extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'location' => array(
+                'startTime' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'startTime' => array(
+                'location' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -310,11 +311,7 @@ class Google_Service_Dataflow extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'filter' => array(
+                'view' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -322,7 +319,11 @@ class Google_Service_Dataflow extends Google_Service
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'view' => array(
+                'filter' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -429,6 +430,10 @@ class Google_Service_Dataflow extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'minimumImportance' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -437,7 +442,7 @@ class Google_Service_Dataflow extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'pageToken' => array(
+                'endTime' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -446,10 +451,6 @@ class Google_Service_Dataflow extends Google_Service
                   'type' => 'integer',
                 ),
                 'location' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'endTime' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -601,6 +602,34 @@ class Google_Service_Dataflow extends Google_Service
                   'type' => 'string',
                 ),
               ),
+            ),'getExecutionDetails' => array(
+              'path' => 'v1b3/projects/{projectId}/locations/{location}/jobs/{jobId}/executionDetails',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'projectId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'location' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'jobId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+              ),
             ),'getMetrics' => array(
               'path' => 'v1b3/projects/{projectId}/locations/{location}/jobs/{jobId}/metrics',
               'httpMethod' => 'GET',
@@ -639,17 +668,17 @@ class Google_Service_Dataflow extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'view' => array(
+                'pageSize' => array(
                   'location' => 'query',
-                  'type' => 'string',
+                  'type' => 'integer',
                 ),
                 'filter' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'pageSize' => array(
+                'view' => array(
                   'location' => 'query',
-                  'type' => 'integer',
+                  'type' => 'string',
                 ),
                 'pageToken' => array(
                   'location' => 'query',
@@ -775,7 +804,11 @@ class Google_Service_Dataflow extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'minimumImportance' => array(
+                'startTime' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'endTime' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -783,15 +816,11 @@ class Google_Service_Dataflow extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'startTime' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
-                'endTime' => array(
+                'minimumImportance' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -824,6 +853,57 @@ class Google_Service_Dataflow extends Google_Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ),
+              ),
+            ),
+          )
+        )
+    );
+    $this->projects_locations_jobs_stages = new Google_Service_Dataflow_Resource_ProjectsLocationsJobsStages(
+        $this,
+        $this->serviceName,
+        'stages',
+        array(
+          'methods' => array(
+            'getExecutionDetails' => array(
+              'path' => 'v1b3/projects/{projectId}/locations/{location}/jobs/{jobId}/stages/{stageId}/executionDetails',
+              'httpMethod' => 'GET',
+              'parameters' => array(
+                'projectId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'location' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'jobId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'stageId' => array(
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'endTime' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'startTime' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),
@@ -1036,21 +1116,21 @@ class Google_Service_Dataflow extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'dynamicTemplate.gcsPath' => array(
+                'dynamicTemplate.stagingLocation' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'dynamicTemplate.stagingLocation' => array(
+                'gcsPath' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'dynamicTemplate.gcsPath' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
                 'validateOnly' => array(
                   'location' => 'query',
                   'type' => 'boolean',
-                ),
-                'gcsPath' => array(
-                  'location' => 'query',
-                  'type' => 'string',
                 ),
               ),
             ),
@@ -1157,15 +1237,15 @@ class Google_Service_Dataflow extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'location' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'gcsPath' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
                 'view' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'location' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -1179,15 +1259,7 @@ class Google_Service_Dataflow extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'dynamicTemplate.stagingLocation' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'location' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-                'dynamicTemplate.gcsPath' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -1195,7 +1267,15 @@ class Google_Service_Dataflow extends Google_Service
                   'location' => 'query',
                   'type' => 'boolean',
                 ),
+                'dynamicTemplate.stagingLocation' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 'gcsPath' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'dynamicTemplate.gcsPath' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),

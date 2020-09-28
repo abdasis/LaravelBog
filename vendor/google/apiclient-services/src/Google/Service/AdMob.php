@@ -30,7 +30,9 @@
  */
 class Google_Service_AdMob extends Google_Service
 {
-
+  /** See your AdMob data. */
+  const ADMOB_REPORT =
+      "https://www.googleapis.com/auth/admob.report";
 
   public $accounts;
   public $accounts_mediationReport;
@@ -71,13 +73,13 @@ class Google_Service_AdMob extends Google_Service
               'path' => 'v1/accounts',
               'httpMethod' => 'GET',
               'parameters' => array(
-                'pageSize' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
                 'pageToken' => array(
                   'location' => 'query',
                   'type' => 'string',
+                ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
                 ),
               ),
             ),
