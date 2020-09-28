@@ -26,6 +26,7 @@
             gtag('js', new Date());
             gtag('config', 'UA-172404660-3');
         </script>
+        @livewireStyles
 
 
     </head>
@@ -55,16 +56,17 @@
 
         @yield('js')
         <!-- custom js -->
-        <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5f2a9f204211fc0012520e87&product=sop' async='async'></script>
-
         <script src="{{ url('/') }}/assets/js/app.js"></script>
         <script src="{{ url('/') }}/js/jquery.scrollbar.min.js"></script>
+        <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5f2a9f204211fc0012520e87&product=sop' async='async'></script>
+        <script src="{{ mix('js/app.js') }}"></script>
         <script>
             jQuery(document).ready(function(){
                 jQuery('.scrollbar-dynamic').scrollbar();
 
             });
         </script>
+        @livewireScripts
     </body>
 
 </html>

@@ -16,9 +16,6 @@ use Illuminate\Support\Collection;
 |
 */
 
-Auth::routes([
-    'register' => false,
-]);
 Route::get('/', 'PostController@home')->name('beranda');
 Route::post('/posts/upload', 'PostController@upload')->name('posts.upload')->middleware('auth');
 Route::resource('posts', 'PostController')->except([
@@ -29,7 +26,6 @@ Route::get('logbook/laporan', 'LogBookController@lapor')->name('logbook.lapor')-
 Route::resource('logbook', 'LogBookController')->middleware('auth');
 Route::get('/{artikel}', 'PostController@show')->name('posts.show');
 
-
-Route::get('/home', function(){
-    return redirect('posts');
-})->name('home');
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');

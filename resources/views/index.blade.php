@@ -44,7 +44,7 @@ Saya Software Engineer berasal dari Indonesia, dengan bahasa pemrograman utama P
                     @foreach ($posts as $post)
                     <div class="card mb-2 shadow-md">
                         <div class="card-body pt-3 pb-0">
-                            <h3 class="card-title mb-0 font-19"><a class="text-dark" href="{{ route('posts.show', ['artikel' => $post->slug]) }}">{{ $post->judul_artikel }}</a></h3>
+                            <h3 class="card-title mb-0 font-19"><a data-turbolinks="false" class="text-dark" href="{{ route('posts.show', ['artikel' => $post->slug]) }}">{{ $post->judul_artikel }}</a></h3>
                             <p class="font-12">
                                 <i class="mdi mdi-tag mr-1"></i>{{ $post->kategori_artikel }} |
                                 <i class="mdi mdi-calendar mr-1"></i>{{ date('d-m-Y', strtotime($post->created_at)) }}
@@ -59,7 +59,7 @@ Saya Software Engineer berasal dari Indonesia, dengan bahasa pemrograman utama P
 
                             </div>
                             <div class="card-text mt-2">
-                                <a href="{{ route('posts.show', ['artikel' => $post->slug]) }}">
+                                <a data-turbolinks="false" href="{{ route('posts.show', ['artikel' => $post->slug]) }}">
                                     <button class="btn btn-sm btn-light btn-block">Baca Selengkapnya</button>
                                 </a>
                             </div>
