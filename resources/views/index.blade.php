@@ -21,7 +21,7 @@ Saya Software Engineer berasal dari Indonesia, dengan bahasa pemrograman utama P
                                 <div class="col-md-7">
                                     <div class="container">
                                         <h1 class="display-5" style="font-family: 'Pacifico', cursive;">Selamat Datang</h1>
-                                        <p class="lead" style="font-family: 'Great Vibes', cursive;
+                                        <p class="lead" style="font-family: 'Great Vibes', cursive; font-size: 15px
                                         ">Berisikan tulisan tentang teknologi, perjalanan hidup dan materi belajar Al-Qur'an</p>
                                       </div>
                                 </div>
