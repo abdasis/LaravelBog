@@ -7,9 +7,8 @@
         </div>
         <div class="card-body pt-0">
             <h4 class="text-black-50">Tentang</h4>
-            <p class="font-13 font-weight-medium">
-                Junior Programmer Pecinta Jendela, Tapi Pelihara Pinguin, Ingin Punya Apple Tapi Tidak Kuat Beli.
-
+            <p class="font-14 font-weight-medium">
+                Pecinta Jendela, Tapi Pelihara Pinguin, Ingin Punya Apple Tapi Tidak Kuat Beli.
                 <a href="https://www.facebook.com/abdasispif">Selengkapnya...</a>
             </p>
         </div>

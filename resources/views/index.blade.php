@@ -13,7 +13,6 @@ Saya Software Engineer berasal dari Indonesia, dengan bahasa pemrograman utama P
     <div class="container-fluid">
         <div class="row">
             @include('includes.left-sidebar')
-
             <div class="col-md-6 mt-3">
                 <div class="card shadow-md">
                     <div class="jumbotronn jumbotron-fluid">
@@ -33,7 +32,7 @@ Saya Software Engineer berasal dari Indonesia, dengan bahasa pemrograman utama P
                     </div>
                 </div>
                 <div class="card-title">
-                    <h3 class="text-black-50">
+                    <h3 class="text-black">
                         {{ $title }}
                     </h3>
                 </div>
