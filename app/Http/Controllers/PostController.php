@@ -19,13 +19,13 @@ class PostController extends Controller
         $pencarian = $request->get('pencarian');
         $kategori = $request->get('kategori');
         if ($kategori){
-            $posts = Post::where('kategori_artikel', $kategori)->paginate(5);
-            $title_post = "KATEGORI: " . $kategori;
+            $posts = Post::where('kategori_artikel', $kategori)->where('status_artikel', 'Published')->paginate(5);
+            $title_post = "Kategori: " . $kategori;
             Session::forget('pencarian');
         }
         elseif(empty($pencarian)) {
             $posts = Post::orderBy('created_at', 'DESC')->where('status_artikel', 'Published')->paginate(5);
-            $title_post = "#Tulisan Terbaru";
+            $title_post = "Tulisan Terbaru";
             Session::forget('pencarian');
 
         }else{
