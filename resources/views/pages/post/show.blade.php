@@ -31,7 +31,7 @@
 
                     <div class="card-body">
                         <div class="card-text">
-                            <div class="content-artikel font-16">
+                            <div class="content-artikel" style="font-size: 17px">
                                 {!! $post->isi_artikel !!}
                             </div>
                         </div>
