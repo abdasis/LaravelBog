@@ -826,3 +826,7 @@ body::-webkit-scrollbar-thumb {
  ::-webkit-scrollbar-thumb:hover {
     background: #BFC0C1;
 }
+
+.content-artikel p{
+    font-size: 18px;
+}

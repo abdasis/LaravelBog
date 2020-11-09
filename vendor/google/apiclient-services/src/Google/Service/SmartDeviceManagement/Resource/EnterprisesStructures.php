@@ -47,11 +47,8 @@ class Google_Service_SmartDeviceManagement_Resource_EnterprisesStructures extend
    * "enterprises/XYZ".
    * @param array $optParams Optional parameters.
    *
+   * @opt_param string filter Optional filter to list structures.
    * @opt_param string pageToken The token of the page to retrieve.
-   * @opt_param string filter Optional filter to list structures. Filters can
-   * match the exact album assigned to the structure. E.g.
-   * 'album=enterprises/XYZ/albums/abc' It also support filtering by parent (only
-   * groups for now): E.g. 'parent=enterprises/XYZ/groups/124'
    * @opt_param int pageSize Requested page size. Server may return fewer
    * structures than requested. If unspecified, server will pick an appropriate
    * default.

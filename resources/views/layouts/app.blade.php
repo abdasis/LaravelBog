@@ -13,6 +13,12 @@
         <!--Material Icon -->
         <link rel="stylesheet" type="text/css" href="{{ url('/') }}/assets/css/materialdesignicons.min.css" />
         @yield('css')
+        <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+        <style>
+            *{
+                font-family: 'Nunito', sans-serif;
+            }
+        </style>
         <!-- Custom  sCss -->
         <link rel="stylesheet" type="text/css" href="{{ url('/') }}/assets/css/style.css" />
         <link rel="stylesheet" type="text/css" href="{{ url('/') }}/css/jquery.scrollbar.css" />
@@ -49,25 +55,25 @@
         <a href="#" class="back-to-top" id="back-to-top"> <i class="mdi mdi-chevron-up"> </i> </a>
 
 
+        @livewireScripts
         <!-- javascript -->
         <script src="{{ url('/') }}/assets/js/jquery.min.js"></script>
         <script src="{{ url('/') }}/assets/js/bootstrap.bundle.min.js"></script>
         <script src="{{ url('/') }}/assets/js/jquery.easing.min.js"></script>
         <script src="{{ url('/') }}/assets/js/scrollspy.min.js"></script>
 
-        @yield('js')
         <!-- custom js -->
         <script src="{{ url('/') }}/assets/js/app.js"></script>
         <script src="{{ url('/') }}/js/jquery.scrollbar.min.js"></script>
         <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5f2a9f204211fc0012520e87&product=sop' async='async'></script>
-        <script src="{{ mix('js/app.js') }}"></script>
         <script>
             jQuery(document).ready(function(){
                 jQuery('.scrollbar-dynamic').scrollbar();
 
             });
         </script>
-        @livewireScripts
+        @yield('js')
+
     </body>
 
 </html>

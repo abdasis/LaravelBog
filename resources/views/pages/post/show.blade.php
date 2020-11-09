@@ -16,10 +16,10 @@
 <section class="artikel">
     <div class="container-fluid">
         <div class="row justify-content-center">
-            <div class="col-md-7 mt-3 col-sm-12">
+            <div class="col-md-8 mt-3 col-sm-12">
                 <div class="card mb-2 shadow-md">
-                    <div class="card-body pt-3 pb-0">
-                        <h1 class="card-title mb-0 font-22">{{ $post->judul_artikel }} @auth <a href="{{ route('posts.edit', $post->slug) }}"><i class="mdi mdi-pencil-circle"></i></a> @endauth</h1>
+                    <div class="card-body pt-3 pb-0" style="border-bottom: 1px dashed #eee">
+                        <h1 class="card-title mb-0 font-28">{{ $post->judul_artikel }} @auth <a href="{{ route('posts.edit', $post->slug) }}"><i class="mdi mdi-pencil-circle"></i></a> @endauth</h1>
                         <p class="font-12 font-weight-bolder ">
                             <span class="text-danger"><i class="mdi mdi-tag mr-1"></i>{{ $post->kategori_artikel }}</span> |
                             <span class="text-blue"><i class="mdi mdi-calendar mr-1"></i>{{ date('d-m-Y', strtotime($post->created_at)) }}</span> |

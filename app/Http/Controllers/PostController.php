@@ -19,17 +19,17 @@ class PostController extends Controller
         $pencarian = $request->get('pencarian');
         $kategori = $request->get('kategori');
         if ($kategori){
-            $posts = Post::where('kategori_artikel', $kategori)->where('status_artikel', 'Published')->paginate(5);
+            $posts = Post::where('kategori_artikel', $kategori)->where('status_artikel', 'Published')->paginate(12);
             $title_post = "Kategori: " . $kategori;
             Session::forget('pencarian');
         }
         elseif(empty($pencarian)) {
-            $posts = Post::orderBy('created_at', 'DESC')->where('status_artikel', 'Published')->paginate(5);
+            $posts = Post::orderBy('created_at', 'DESC')->where('status_artikel', 'Published')->paginate(12);
             $title_post = "Tulisan Terbaru";
             Session::forget('pencarian');
 
         }else{
-            $posts = Post::where('judul_artikel', 'like', '%' . $pencarian . '%')->paginate(5);
+            $posts = Post::where('judul_artikel', 'like', '%' . $pencarian . '%')->paginate(12);
             $title_post = "Hasil pencarian: " . $pencarian;
             Session::flash('pencarian', $pencarian);
         }

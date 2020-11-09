@@ -87,6 +87,9 @@ class Google_Service_DisplayVideo_Resource_AdvertisersInsertionOrders extends Go
    * insertion orders for.
    * @param array $optParams Optional parameters.
    *
+   * @opt_param int pageSize Requested page size. Must be between `1` and `100`.
+   * If unspecified will default to `100`. Returns error code `INVALID_ARGUMENT`
+   * if an invalid value is specified.
    * @opt_param string filter Allows filtering by insertion order properties.
    * Supported syntax: * Filter expressions are made up of one or more
    * restrictions. * Restrictions can be combined by `AND` or `OR` logical
@@ -111,9 +114,6 @@ class Google_Service_DisplayVideo_Resource_AdvertisersInsertionOrders extends Go
    * should return. Typically, this is the value of next_page_token returned from
    * the previous call to `ListInsertionOrders` method. If not specified, the
    * first page of results will be returned.
-   * @opt_param int pageSize Requested page size. Must be between `1` and `100`.
-   * If unspecified will default to `100`. Returns error code `INVALID_ARGUMENT`
-   * if an invalid value is specified.
    * @return Google_Service_DisplayVideo_ListInsertionOrdersResponse
    */
   public function listAdvertisersInsertionOrders($advertiserId, $optParams = array())

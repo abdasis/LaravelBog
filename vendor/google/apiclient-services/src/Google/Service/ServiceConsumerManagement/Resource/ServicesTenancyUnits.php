@@ -26,7 +26,7 @@
 class Google_Service_ServiceConsumerManagement_Resource_ServicesTenancyUnits extends Google_Service_Resource
 {
   /**
-   * Add a new tenant project to the tenancy unit. There can be a maximum of 512
+   * Add a new tenant project to the tenancy unit. There can be a maximum of 1024
    * tenant projects in a tenancy unit. If there are previously failed
    * `AddTenantProject` calls, you might need to call `RemoveTenantProject` first
    * to resolve them before you can make another call to `AddTenantProject` with

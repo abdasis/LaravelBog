@@ -17,11 +17,14 @@
         <div class="col-md-8">
             <div class="card shadow-md">
 
+                <h5 class="card-header bg-white border-bottom">
+                    <span>Daftar Semua Artikel</span>
+                    <a href="{{ route('posts.create') }}">
+                        <button class="btn btn-light btn-sm  float-right">Tambah Artikel</button>
+                    </a>
+                </h5>
                 <div class="card-body">
-                    <div class="card-title">
-                        <h4>Daftar Semua Artikel</h4>
-                        <p>Daftar Seluruh Artikel</p>
-                    </div>
+
                     <table class="table table-bordered table-striped table-sm" id="myTable">
                         <thead>
                             <tr>

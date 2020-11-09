@@ -7,7 +7,7 @@
         </div>
         <div class="card-body pt-0">
             <h4 class="text-black-50">Tentang</h4>
-            <p class="font-14 font-weight-medium">
+            <p class="font-14 font-weight-semibold">
                 Pecinta Jendela, Tapi Pelihara Pinguin, Ingin Punya Apple Tapi Tidak Kuat Beli.
                 <a href="https://www.facebook.com/abdasispif">Selengkapnya...</a>
             </p>
@@ -15,43 +15,17 @@
     </div>
 
     <div class="card shadow-md" >
+        <h5 class=" bg-white border-bottom card-header font-weight-bolder "><i class="mdi mdi-chart-areaspline mr-1"></i>ARTIKEL TERBARU</h5>
         <div class="card-body">
-            <div class="card-title">
-                <h3><i class="mdi mdi-account-group-outline mr-1"></i>Group Belajar</h3>
-            </div>
-
             <div class="card-text">
-                <a href="#">
-                    <div class="row pl-2 middle-content">
-                        <img src="{{ asset('/assets/images/ubuntu-id.jpg') }}" alt="" class="img-fluid logo-group rounded-circle mr-2">
-                        <h3 class="nama-group">Ubuntu Indonesia</h3>
-                    </div>
-                </a>
-                <a href="https://web.facebook.com/groups/phpid" target="_blank">
-                    <div class="row pl-2 middle-content">
-                        <img src="{{ asset('/assets/images/php-id.jpg') }}" alt="" class="img-fluid logo-group rounded-circle mr-2">
-                        <h3 class="nama-group">PHP Indonesia</h3>
-                    </div>
-                </a>
-                <a href="https://web.facebook.com/groups/phpid" target="_blank">
-                    <div class="row pl-2 middle-content">
-                        <img src="{{ asset('/assets/images/laravel-id.jpg') }}" alt="" class="img-fluid logo-group rounded-circle mr-2">
-                        <h3 class="nama-group">Laravel Indonesia</h3>
-                    </div>
-                </a>
-                <a href="https://web.facebook.com/groups/phpid" target="_blank">
-                    <div class="row pl-2 middle-content">
-                        <img src="{{ asset('/assets/images/react-id.jpg') }}" alt="" class="img-fluid logo-group rounded-circle mr-2">
-                        <h3 class="nama-group">ReactJs Indonesia</h3>
-                    </div>
-                </a>
-
-                <a href="https://web.facebook.com/groups/phpid" target="_blank">
-                    <div class="row pl-2 middle-content">
-                        <img src="{{ asset('/assets/images/vue-id.jpg') }}" alt="" class="img-fluid logo-group rounded-circle mr-2">
-                        <h3 class="nama-group">Vue Indonesia</h3>
-                    </div>
-                </a>
+                @foreach (App\Models\Post::latest()->get() as $key => $post)
+                    <a href="{{ route('posts.show', $post->slug) }}">
+                        <div class="row pl-3 rounded-pill middle-content" style="border-bottom: 1px dashed #eee">
+                            <h3 class="text-gray-100 mr-2">{{ $post->id }}</h3>
+                            <h3 class="nama-group">{{ $post->judul_artikel }}</h3>
+                        </div>
+                    </a>
+                @endforeach
             </div>
         </div>
     </div>
