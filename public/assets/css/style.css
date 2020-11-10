@@ -827,7 +827,7 @@ body::-webkit-scrollbar-thumb {
     background: #BFC0C1;
 }
 
-.content-artikel p {
+.content-artikel p{
     font-size: 17px;
     line-height: 30px !important;
     margin-bottom: 0 !important;
