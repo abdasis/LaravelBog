@@ -31,7 +31,7 @@ Saya Software Engineer berasal dari Indonesia, dengan bahasa pemrograman utama P
                         <a href="{{ route('posts.show', $post->slug) }}">
                             <h4 class="card-title">{{ ucfirst($post->judul_artikel) }}</h4>
                         </a>
-                        <p class="card-text">{!! Str::limit($post->isi_artikel, 250, '...') !!}</p>
+                        {{-- <p class="card-text">{!! Str::limit($post->isi_artikel, 250, '...') !!}</p> --}}
                         <p class="card-text"><small class="text-muted">{{ date('d-m-Y', strtotime($post->created_at)) }}</small></p>
                     </div>
                 </div>

@@ -1,4 +1,4 @@
-<div class="col-md-3 col-sm-12">
+<div class="col-md-4 col-sm-12">
     <div class="card mt-3 shadow-md">
         <img src="{{ asset('/assets/images/asis.jpg') }}" alt="" class="img-profil align-self-center rounded-circle">
         <div class="card-title text-center pb-0">
@@ -21,7 +21,6 @@
                 @foreach (App\Models\Post::latest()->get() as $key => $post)
                     <a href="{{ route('posts.show', $post->slug) }}">
                         <div class="row pl-3 rounded-pill middle-content" style="border-bottom: 1px dashed #eee">
-                            <h3 class="text-gray-100 mr-2">{{ $post->id }}</h3>
                             <h3 class="nama-group">{{ $post->judul_artikel }}</h3>
                         </div>
                     </a>
