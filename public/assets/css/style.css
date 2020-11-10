@@ -830,4 +830,5 @@ body::-webkit-scrollbar-thumb {
 .content-artikel p{
     font-size: 18px;
     line-height: 20px !important;
+    margin-bottom: 0 !important;
 }
