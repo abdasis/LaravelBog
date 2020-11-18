@@ -26,10 +26,9 @@ Route::get('logbook/laporan', 'LogBookController@lapor')->name('logbook.lapor')-
 Route::resource('logbook', 'LogBookController')->middleware('auth');
 Route::get('/{artikel}', 'PostController@show')->name('posts.show');
 
+
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
-Route::get([
-    'register' => 'false'
-]);
