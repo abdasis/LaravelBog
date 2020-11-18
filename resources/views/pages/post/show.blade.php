@@ -20,14 +20,14 @@
                 <div class="card mb-2 shadow-md">
                     <div class="card-body pt-3 pb-0" style="border-bottom: 1px dashed #eee">
                         <h1 class="card-title mb-0 font-28">{{ $post->judul_artikel }} @auth <a href="{{ route('posts.edit', $post->slug) }}"><i class="mdi mdi-pencil-circle"></i></a> @endauth</h1>
-                        <p class="font-12 font-weight-bolder ">
-                            <span class="text-danger"><i class="mdi mdi-tag mr-1"></i>{{ $post->kategori_artikel }}</span> |
-                            <span class="text-blue"><i class="mdi mdi-calendar mr-1"></i>{{ date('d-m-Y', strtotime($post->created_at)) }}</span> |
-                            <span class="text-success"><i class="mdi mdi-account-circle mr-1"></i>Abd. Asis</span>
+                        <p class="font-14 font-weight-bolder mt-1">
+                            <span class="text-danger font-14 badge badge-soft-danger p-1"><i class="mdi mdi-tag mr-1"></i>{{ $post->kategori_artikel ?? 'Catatan' }}</span>
+                            <span class="text-blue font-14 badge badge-soft-blue p-1"><i class="mdi mdi-calendar mr-1"></i>{{ date('d-m-Y', strtotime($post->created_at)) }}</span>
+                            <span class="text-success font-14 badge badge-soft-success p-1"><i class="mdi mdi-account-circle mr-1"></i>Abd. Asis</span>
                         </p>
                     </div>
                     <img class="card-img-top img-post-thumbnail" src="{{ asset('thumbnail-artikel/') .'/'.$post->thumbnail_artikel }}" alt="Card image cap">
-                    <img src="{{ asset('/assets/images/asis.jpg') }}" alt="" class="img-profil align-self-center rounded-circle">
+                    <img src="{{ asset('/assets/images/asis.jpeg') }}" alt="" class="img-profil align-self-center rounded-circle">
 
                     <div class="card-body">
                         <div class="card-text">
