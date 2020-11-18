@@ -71,7 +71,7 @@ class PostController extends Controller
     {
         $post = new Post();
         $post->judul_artikel = $request->judul_artikel;
-        $post->isi_artikel = $request->isi_artikel;
+        $post->isi_artikel = $request->get('isi_artikel');
         $post->status_artikel = $request->status_artikel;
         $post->excerpt_artikel = Str::limit($request->isi_artikel, 80);
         $post->slug = Str::slug($request->judul_artikel, '-');
@@ -131,7 +131,7 @@ class PostController extends Controller
     {
         $post = Post::where('slug', $id)->first();
         $post->judul_artikel = $request->judul_artikel;
-        $post->isi_artikel = $request->isi_artikel;
+        $post->isi_artikel = $request->get('isi_artikel');
         $post->status_artikel = $request->status_artikel;
         $post->excerpt_artikel = Str::limit($request->isi_artikel, 80);
         $post->slug = Str::slug($request->judul_artikel, '-');
