@@ -26,7 +26,7 @@
                             <span class="text-success font-14 badge badge-soft-success p-1"><i class="mdi mdi-account-circle mr-1"></i>Abd. Asis</span>
                         </p>
                     </div>
-                    <img class="card-img-top img-post-thumbnail" src="{{ asset('thumbnail-artikel/') .'/'.$post->thumbnail_artikel }}" alt="Card image cap">
+                    <img class="card-img-top img-post-thumbnail" src="{{ $post->thumbnail_artikel == null ? asset('assets/images/patient_forms_drib.jpg') : asset('thumbnail-artikel/') .'/'.$post->thumbnail_artikel }}" alt="Card image cap">
                     <img src="{{ asset('/assets/images/asis.jpeg') }}" alt="" class="img-profil align-self-center rounded-circle">
 
                     <div class="card-body">

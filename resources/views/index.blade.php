@@ -9,9 +9,12 @@ Saya Software Engineer berasal dari Indonesia, dengan bahasa pemrograman utama P
     The Journey To a Great Programmer
 @endsection
 @section('content')
-<div class="jumbotron jumbotron-fluid" style="background: #2196F3">
+<div class="jumbotron jumbotron-fluid" style="background:linear-gradient(
+    rgba(0, 153, 255, 0.767),
+    rgba(0, 153, 255, 0.979)
+  ),  url('{{ asset('assets/images/cloud_computing.png') }}')">
     <div class="container pt-5 pb-3">
-      <h1 class="display-4 text-white">Hai, Teman-teman!</h1>
+      <h1 class="display-4 font-weight-bolder text-white">Hai, Teman-teman!</h1>
       <p class="lead text-white">Yuk sharing tentang pemrograman bersama saya, jangan lupa kritik dan sarannya yaa di kolom komentar</p>
     </div>
   </div>
@@ -26,7 +29,7 @@ Saya Software Engineer berasal dari Indonesia, dengan bahasa pemrograman utama P
             @foreach ($posts as $post)
             <div class="col-md-4 col-sm-12">
                 <div class="card shadow-md">
-                    <img class="card-img-top" src="{{ asset('thumbnail-artikel/') .'/'.$post->thumbnail_artikel }}" alt="Card image cap">
+                    <img class="card-img-top" src="{{ $post->thumbnail_artikel == null ? asset('assets/images/patient_forms_drib.jpg') : asset('thumbnail-artikel/') .'/'.$post->thumbnail_artikel  }}" alt="Card image cap">
                     <div class="card-body">
                         <a href="{{ route('posts.show', $post->slug) }}">
                             <h4 class="card-title">{{ ucfirst($post->judul_artikel) }}</h4>
