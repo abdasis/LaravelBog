@@ -26,7 +26,13 @@
                             <span class="text-success font-14 badge badge-soft-success p-1"><i class="mdi mdi-account-circle mr-1"></i>Abd. Asis</span>
                         </p>
                     </div>
-                    <img class="card-img-top img-post-thumbnail" src="{{ $post->thumbnail_artikel == null ? asset('assets/images/patient_forms_drib.jpg') : asset('thumbnail-artikel/') .'/'.$post->thumbnail_artikel }}" alt="Card image cap">
+
+                    @if ($post->thumbnail_artikel  && file_exists(public_path('thumbnail-artikel') . '/' . $post->thumbnail_artikel))
+                    <img class="card-img-top img-post-thumbnail" src="{{ asset('thumbnail-artikel/') .'/'.$post->thumbnail_artikel }}" alt="Card image cap">
+                    @else
+                    <img class="card-img-top img-post-thumbnail" src="{{ asset('assets/images/patient_forms_drib.jpg') }}" alt="Card image cap">
+                    @endif
+
                     <img src="{{ asset('/assets/images/asis.jpeg') }}" alt="" class="img-profil align-self-center rounded-circle">
 
                     <div class="card-body">
@@ -36,6 +42,8 @@
                             </div>
                         </div>
                     </div>
+
+
 
                     <div class="card-body">
                         <h4 class="text-center">Jika dirasa artikel ini bermanfaat yuk bagikan ke temanmu!</h4>
