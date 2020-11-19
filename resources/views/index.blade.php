@@ -22,7 +22,7 @@ Saya Software Engineer berasal dari Indonesia, dengan bahasa pemrograman utama P
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h3 class="section-title text-black-50">Artikel Terbaru</h3>
+                <h3 class="section-title text-black-50 font-weight-bolder">Artikel Terbaru</h3>
             </div>
         </div>
         <div class="row justify-content-start">

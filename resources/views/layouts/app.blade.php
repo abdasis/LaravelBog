@@ -14,9 +14,16 @@
         <link rel="stylesheet" type="text/css" href="{{ url('/') }}/assets/css/materialdesignicons.min.css" />
         @yield('css')
         <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pacifico&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
         <style>
             *{
                 font-family: 'Nunito', sans-serif;
+            }
+
+            h3{
+                font-family: 'Acme', sans-serif !important;
             }
         </style>
         <!-- Custom  sCss -->
@@ -26,7 +33,7 @@
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172404660-2"></script>
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172404660-3"></script>
-        <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pacifico&display=swap" rel="stylesheet">
+
         <script>
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
