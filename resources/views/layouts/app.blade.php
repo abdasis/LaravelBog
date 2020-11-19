@@ -25,6 +25,13 @@
             h3{
                 font-family: 'Acme', sans-serif !important;
             }
+
+            .img-post-thumbnail-small {
+                height: 360px !important;
+                width: 250px !important;
+                object-fit: scale-down;
+                object-position: center;
+            }
         </style>
         <!-- Custom  sCss -->
         <link rel="stylesheet" type="text/css" href="{{ url('/') }}/assets/css/style.css" />
