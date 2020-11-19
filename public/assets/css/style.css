@@ -751,6 +751,13 @@ header {
     object-position: center;
 }
 
+.img-post-thumbnail-small {
+    height: 346px;
+    width: 250px;
+    object-fit: scale-down;
+    object-position: center;
+}
+
 .content-artikel {
     line-height: 26px;
 }
