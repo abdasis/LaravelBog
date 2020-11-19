@@ -27,11 +27,20 @@
             }
 
             .img-post-thumbnail-small {
-                height: 360px !important;
-                width: 250px !important;
-                object-fit: scale-down;
+                height: 256px !important;
+                width: 100% !important;
+                object-fit: cover;
                 object-position: center;
             }
+
+            .img-post-thumbnail {
+                height: 360px;
+                width: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+
+
         </style>
         <!-- Custom  sCss -->
         <link rel="stylesheet" type="text/css" href="{{ url('/') }}/assets/css/style.css" />
