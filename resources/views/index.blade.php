@@ -29,7 +29,11 @@ Saya Software Engineer berasal dari Indonesia, dengan bahasa pemrograman utama P
             @foreach ($posts as $post)
             <div class="col-md-4 col-sm-12">
                 <div class="card shadow-md">
-                    <img class="card-img-top" src="{{ $post->thumbnail_artikel == null ? asset('assets/images/patient_forms_drib.jpg') : asset('thumbnail-artikel/') .'/'.$post->thumbnail_artikel  }}" alt="Card image cap">
+                    @if ($post->thumbnail_artikel  && file_exists(public_path('thumbnail-artikel') . '/' . $post->thumbnail_artikel))
+                    <img class="card-img-top img-post-thumbnail" src="{{ asset('thumbnail-artikel/') .'/'.$post->thumbnail_artikel }}" alt="Card image cap">
+                    @else
+                    <img class="card-img-top img-post-thumbnail" src="{{ asset('assets/images/patient_forms_drib.jpg') }}" alt="Card image cap">
+                    @endif
                     <div class="card-body">
                         <a href="{{ route('posts.show', $post->slug) }}">
                             <h4 class="card-title">{{ ucfirst($post->judul_artikel) }}</h4>
