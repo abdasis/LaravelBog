@@ -13,8 +13,8 @@
             <i class="mdi mdi-menu"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
-            <form action="{{ route('beranda') }}" method="get" class="d-lg-block px-4 w-100">
-                <input type="text" name="pencarian" class="form-control-lg w-100 rounded-pill form-header" value="{{ Session::get('pencarian') }}"  placeholder="Masukan pencarian">
+            <form action="{{ route('beranda') }}" method="get">
+                <input type="text" name="pencarian" class="form-control-lg mx-4 w-70 rounded-pill form-header" value="{{ Session::get('pencarian') }}"  placeholder="Masukan pencarian">
             </form>
             <ul class="navbar-nav ml-auto" id="mySidenav">
                 <li class="nav-item">
@@ -26,7 +26,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <b><a href="#" class="nav-link">Labs</a></b>
+                    <b><a href="{{ route('resep.index') }}" class="nav-link">Resep Makanan  <sup><span class="badge badge-danger">HOT</span></sup></a></b>
                 </li>
             </ul>
 

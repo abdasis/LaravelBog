@@ -17,6 +17,11 @@
         <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pacifico&display=swap" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+                <!-- Add the slick-theme.css if you want default styling -->
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <!-- Add the slick-theme.css if you want default styling -->
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+        @livewireStyles
         <style>
             *{
                 font-family: 'Nunito', sans-serif;
@@ -56,9 +61,6 @@
             gtag('js', new Date());
             gtag('config', 'UA-172404660-3');
         </script>
-        @livewireStyles
-
-
     </head>
 
     <body>
@@ -77,25 +79,25 @@
         <!-- Back to top -->
         <a href="#" class="back-to-top" id="back-to-top"> <i class="mdi mdi-chevron-up"> </i> </a>
 
-
-        @livewireScripts
         <!-- javascript -->
+        @livewireScripts
         <script src="{{ url('/') }}/assets/js/jquery.min.js"></script>
         <script src="{{ url('/') }}/assets/js/bootstrap.bundle.min.js"></script>
         <script src="{{ url('/') }}/assets/js/jquery.easing.min.js"></script>
         <script src="{{ url('/') }}/assets/js/scrollspy.min.js"></script>
-
         <!-- custom js -->
         <script src="{{ url('/') }}/assets/js/app.js"></script>
         <script src="{{ url('/') }}/js/jquery.scrollbar.min.js"></script>
         <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5f2a9f204211fc0012520e87&product=sop' async='async'></script>
         <script>
-            jQuery(document).ready(function(){
-                jQuery('.scrollbar-dynamic').scrollbar();
+        jQuery(document).ready(function(){
+            jQuery('.scrollbar-dynamic').scrollbar();
 
-            });
+        });
         </script>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
         @yield('js')
+        @stack('js')
 
     </body>
 
