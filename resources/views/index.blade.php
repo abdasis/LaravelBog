@@ -20,23 +20,25 @@ Saya Software Engineer berasal dari Indonesia, dengan bahasa pemrograman utama P
 </div>
 <section class="artikel m-0">
     <div class="container">
-        <div data-slick='{"slidesToShow": 2, "slidesToScroll": 4}' class="center card-deck">
+        <div data-slick='{"slidesToShow": 2, "slidesToScroll": 4}' class="center row">
             @foreach ($posts as $post)
-            <div class="card">
-                @if ($post->thumbnail_artikel  && file_exists(public_path('thumbnail-artikel') . '/' . $post->thumbnail_artikel))
-                <img class="card-img-top img-post-thumbnail-small" src="{{ asset('thumbnail-artikel/') .'/'.$post->thumbnail_artikel }}" alt="Card image cap">
-                @else
-                <img class="card-img-top img-post-thumbnail-small" src="{{ asset('assets/images/patient_forms_drib.jpg') }}" alt="Card image cap">
-                @endif
-                <div class="card-body">
-                    <a href="{{ route('posts.show', $post->slug) }}">
-                        <h4 class="card-title">{{ ucfirst($post->judul_artikel) }}</h4>
-                    </a>
-                    {{-- <p class="card-text">{!! Str::limit($post->isi_artikel, 250, '...') !!}</p> --}}
-                    <p class="card-text font-11">
-                        <span class="font-weight-semibold badge-soft-dark p-1 rounded"></small>{{ date('d-m-Y', strtotime($post->created_at)) }}</small></span>
-                        <span class="font-weight-semibold badge-soft-danger p-1 rounded"></small> <i class="mdi mdi-fire"></i> {{ views($post)->count() }} Dilihat</small></span>
-                    </p>
+            <div class="col-md-4 col-sm-6">
+                <div class="card">
+                    @if ($post->thumbnail_artikel  && file_exists(public_path('thumbnail-artikel') . '/' . $post->thumbnail_artikel))
+                    <img class="card-img-top img-post-thumbnail-small" src="{{ asset('thumbnail-artikel/') .'/'.$post->thumbnail_artikel }}" alt="Card image cap">
+                    @else
+                    <img class="card-img-top img-post-thumbnail-small" src="{{ asset('assets/images/patient_forms_drib.jpg') }}" alt="Card image cap">
+                    @endif
+                    <div class="card-body">
+                        <a href="{{ route('posts.show', $post->slug) }}">
+                            <h4 class="card-title">{{ ucfirst($post->judul_artikel) }}</h4>
+                        </a>
+                        {{-- <p class="card-text">{!! Str::limit($post->isi_artikel, 250, '...') !!}</p> --}}
+                        <p class="card-text font-11">
+                            <span class="font-weight-semibold badge-soft-dark p-1 rounded"></small>{{ date('d-m-Y', strtotime($post->created_at)) }}</small></span>
+                            <span class="font-weight-semibold badge-soft-danger p-1 rounded"></small> <i class="mdi mdi-fire"></i> {{ views($post)->count() }} Dilihat</small></span>
+                        </p>
+                    </div>
                 </div>
             </div>
             @endforeach

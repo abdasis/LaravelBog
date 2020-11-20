@@ -13,19 +13,21 @@
         </div>
     </div>
     <div class="container">
-        <div wire:ignore data-slick='{"slidesToShow": 2, "slidesToScroll": 4}' class="center card-deck">
+        <div wire:ignore data-slick='{"slidesToShow": 2, "slidesToScroll": 4}' class="center row">
             @foreach ($recipes['results'] as $recipe)
-            <div class="card">
-                <img class="card-img-top" src="{{ $recipe['thumb'] }}" alt="Card image cap">
-                <div class="card-body">
-                    <a href="{{ route('resep.show', $recipe['key']) }}">
-                        <h4 class="card-title">{{ ucfirst($recipe['title']) }}</h4>
-                    </a>
-                    <p class="card-text text-center font-14">
-                        <span class="time mr-2 badge p-1 badge-outline-blue"><i class="mdi mdi-alarm"></i> {{ $recipe['times'] }}</span>
-                        <span class="time mr-2 badge p-1 badge-outline-pink"><i class="mdi mdi-room-service-outline"></i> {{ $recipe['serving'] ?? $recipe['portion'] }}</span>
-                        <span class="time mr-2 badge p-1 badge-outline-success"><i class="mdi mdi-book-open"></i> {{ $recipe['difficulty'] ?? $recipe['dificulty'] }}</span>
-                    </p>
+            <div class="col-md-4 col-sm-6">
+                <div class="card">
+                    <img class="card-img-top" src="{{ $recipe['thumb'] }}" alt="Card image cap">
+                    <div class="card-body">
+                        <a href="{{ route('resep.show', $recipe['key']) }}">
+                            <h4 class="card-title">{{ ucfirst($recipe['title']) }}</h4>
+                        </a>
+                        <p class="card-text text-center font-14">
+                            <span class="time mr-2 badge p-1 badge-outline-blue"><i class="mdi mdi-alarm"></i> {{ $recipe['times'] }}</span>
+                            <span class="time mr-2 badge p-1 badge-outline-pink"><i class="mdi mdi-room-service-outline"></i> {{ $recipe['serving'] ?? $recipe['portion'] }}</span>
+                            <span class="time mr-2 badge p-1 badge-outline-success"><i class="mdi mdi-book-open"></i> {{ $recipe['difficulty'] ?? $recipe['dificulty'] }}</span>
+                        </p>
+                    </div>
                 </div>
             </div>
             @endforeach
