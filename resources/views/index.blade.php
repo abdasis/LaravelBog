@@ -91,7 +91,6 @@ Saya Software Engineer berasal dari Indonesia, dengan bahasa pemrograman utama P
                     settings: {
                         arrows: false,
                         centerMode: true,
-                        centerPadding: '40px',
                         slidesToShow: 3,
                         slidesToScroll: 3
                     }
@@ -101,8 +100,8 @@ Saya Software Engineer berasal dari Indonesia, dengan bahasa pemrograman utama P
                     settings: {
                         arrows: false,
                         centerMode: true,
-                        slidesToShow: 2,
-                        slidesToScroll: 2
+                        slidesToShow: 1,
+                        slidesToScroll: 1
                     }
                 },
                 {
