@@ -155,3 +155,8 @@
         </div>
     </section>
 </div>
+
+
+@section('title')
+{{ $recipe['title'] }}
+@endsection
