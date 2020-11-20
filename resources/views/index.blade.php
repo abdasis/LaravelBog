@@ -88,25 +88,33 @@ Saya Software Engineer berasal dari Indonesia, dengan bahasa pemrograman utama P
             responsive: [
                 {
                 breakpoint: 768,
-                settings: {
-                    arrows: false,
-                    centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 3,
-                    slidesToScroll: 3
-                }
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 3,
+                        slidesToScroll: 3
+                    }
                 },
                 {
-                breakpoint: 480,
-                settings: {
-                    arrows: false,
-                    centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 1,
-                    slidesToScroll: 1
+                    breakpoint: 600,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        slidesToShow: 1,
+                        slidesToScroll: 1
 
-                }
-                }
+                    }
+                },
             ]
         });
     </script>
