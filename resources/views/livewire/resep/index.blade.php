@@ -46,7 +46,7 @@
                 @if ($recipes['results'])
                 @foreach ($recipes['results'] as $recipe)
                 <div class="col-md-3">
-                    <div class="card">
+                    <div class="card shadow-md">
                         <img class="card-img-top" src="{{ $recipe['thumb'] }}" alt="Card image cap">
                         <div class="card-body">
                             <a href="{{ route('resep.show', $recipe['key']) }}">
