@@ -58,8 +58,6 @@
                                             <button class="btn btn-sm btn-danger"><i class="mdi mdi-delete mr-1"></i>Hapus</button>
                                         </form>
                                     </div>
-
-
                                 </td>
                             </tr>
                             @endforeach

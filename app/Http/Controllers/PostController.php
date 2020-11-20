@@ -100,8 +100,11 @@ class PostController extends Controller
     public function show($artikel)
     {
         $post = Post::where('slug', $artikel)->first();
+        views($post)
+        ->cooldown(2)
+        ->record();
         if ($post) {
-            return view('pages.post.show')->withPost($post);
+            return view('pages.post.show')->withPost($post)->withTotalCount(views($post)->count());
         }else{
             abort(404);
         }

@@ -39,7 +39,10 @@ Saya Software Engineer berasal dari Indonesia, dengan bahasa pemrograman utama P
                             <h4 class="card-title">{{ ucfirst($post->judul_artikel) }}</h4>
                         </a>
                         {{-- <p class="card-text">{!! Str::limit($post->isi_artikel, 250, '...') !!}</p> --}}
-                        <p class="card-text"><small class="text-muted">{{ date('d-m-Y', strtotime($post->created_at)) }}</small></p>
+                        <p class="card-text font-11">
+                            <span class="font-weight-semibold badge-soft-dark p-1 rounded"></small>{{ date('d-m-Y', strtotime($post->created_at)) }}</small></span>
+                            <span class="font-weight-semibold badge-soft-danger p-1 rounded"></small> <i class="mdi mdi-fire"></i> {{ views($post)->count() }} Dilihat</small></span>
+                        </p>
                     </div>
                 </div>
             </div>

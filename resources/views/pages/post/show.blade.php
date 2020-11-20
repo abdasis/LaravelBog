@@ -24,6 +24,7 @@
                             <span class="text-danger font-14 badge badge-soft-danger p-1"><i class="mdi mdi-tag mr-1"></i>{{ $post->kategori_artikel ?? 'Catatan' }}</span>
                             <span class="text-blue font-14 badge badge-soft-blue p-1"><i class="mdi mdi-calendar mr-1"></i>{{ date('d-m-Y', strtotime($post->created_at)) }}</span>
                             <span class="text-success font-14 badge badge-soft-success p-1"><i class="mdi mdi-account-circle mr-1"></i>Abd. Asis</span>
+                            <span class="text-danger font-14 badge badge-soft-danger p-1"><i class="mdi mdi-fire mr-1"></i>{{ $totalCount }} Dilihat</span>
                         </p>
                     </div>
 
