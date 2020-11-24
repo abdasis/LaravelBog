@@ -767,8 +767,8 @@ header {
 
 .content-artikel code {
     overflow: auto;
+    font-size: 15px;
 }
-
 .content-artikel pre {
     background: #F6F8FA !important;
     border-radius: 6px;
