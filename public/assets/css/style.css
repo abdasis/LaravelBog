@@ -766,12 +766,10 @@ header {
 }
 
 .content-artikel code {
-    padding: 20px !important;
     overflow: auto;
 }
 
 .content-artikel pre {
-    /* border: 2px solid gray; */
     background: #F6F8FA !important;
     border-radius: 6px;
     border: 1px solid #edeeee;

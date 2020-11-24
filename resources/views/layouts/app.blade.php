@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="{{ url('/') }}/assets/css/bootstrap.min.css" type="text/css">
         <!--Material Icon -->
         <link rel="stylesheet" type="text/css" href="{{ url('/') }}/assets/css/materialdesignicons.min.css" />
+        <link rel="stylesheet" href="css/prism.css">
         @yield('css')
         <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pacifico&display=swap" rel="stylesheet">
@@ -95,6 +96,7 @@
 
         });
         </script>
+        <script src="{{ asset('js/prism.js') }}"></script>
         <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
         @yield('js')
         @stack('js')

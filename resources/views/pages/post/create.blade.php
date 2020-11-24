@@ -79,6 +79,7 @@
 @section('js')
 <script src="https://cdn.tiny.cloud/1/3kubek8r1p1mz4kvit7hc1z2mxd8wgg551cbeu82qkmenprf/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 <script>
+
 $(document).ready(function() {
     tinymce.init({
         selector: "textarea",
@@ -93,6 +94,7 @@ $(document).ready(function() {
         automatic_uploads: true,
         images_upload_url: "/posts/upload",
         file_picker_types: "image",
+        codesample_global_prismjs: true,
         image_class_list: [
             {title: 'Full width', value: 'img-fluid img-responsive img-thumbnail'},
             {title: 'Bootstrap', value: 'w-100'},
@@ -101,10 +103,11 @@ $(document).ready(function() {
             "advlist autolink lists link image charmap print preview hr anchor pagebreak",
             "searchreplace wordcount visualblocks visualchars code fullscreen",
             "insertdatetime media nonbreaking save table contextmenu directionality",
-            "emoticons template paste textcolor colorpicker textpattern code"
+            "emoticons template paste textcolor colorpicker textpattern code",
+            "codesample"
         ],
         toolbar1:
-            "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image",
+            "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | codesample bullist numlist outdent indent | link image",
         // override default upload handler to simulate successful upload
         file_picker_callback: function(cb, value, meta) {
             var input = document.createElement("input");
@@ -130,3 +133,7 @@ $(document).ready(function() {
 </script>
 
 @endsection
+
+{{-- @section('css')
+    <link rel="stylesheet" href="css/prism.css">
+@endsection --}}
