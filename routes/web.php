@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Spatie\Analytics\Period;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Artisan;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +20,11 @@ use Illuminate\Support\Collection;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('clear-cache', function () {
+    $optimize = Artisan::call('optimize');
+    dd($optimize);
+});
+
 Route::group(['prefix' => 'resep-makanan'], function () {
     Route::get('/', Index::class)->name('resep.index');
     Route::get('/{resep}', Show::class)->name('resep.show');
@@ -32,4 +38,3 @@ Route::get('logbook/{logbook}/selesai', [LogBookController::class, 'selesai'])->
 Route::get('logbook/laporan', [LogBookController::class, 'lapor'])->name('logbook.lapor')->middleware('auth');
 Route::resource('logbook', LogBookController::class)->middleware('auth');
 Route::get('/{artikel}', [PostController::class, 'show'])->name('posts.show');
-
