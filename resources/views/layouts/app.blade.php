@@ -15,15 +15,10 @@
         <link rel="stylesheet" href="css/prism.css">
         @yield('css')
         <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pacifico&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
                 <!-- Add the slick-theme.css if you want default styling -->
-        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
         <!-- Add the slick-theme.css if you want default styling -->
         <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/progressive-image.js/dist/progressive-image.css">
-        <script src="https://cdn.jsdelivr.net/npm/progressive-image.js/dist/progressive-image.js"></script>
 
         @livewireStyles
         <style>
@@ -74,7 +69,7 @@
 
         <!-- javascript -->
         @livewireScripts
-        <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
         <script src="{{ url('/') }}/assets/js/jquery.min.js"></script>
         <script src="{{ url('/') }}/assets/js/bootstrap.bundle.min.js"></script>
         <script src="{{ url('/') }}/assets/js/jquery.easing.min.js"></script>
@@ -82,7 +77,6 @@
         <script src="{{ url('/') }}/assets/js/app.js"></script>
         <!-- Go to www.addthis.com/dashboard to customize your tools -->
         <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5f09333631fdfe6a"></script>
-
         <script src="{{ asset('js/prism.js') }}"></script>
         <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
         @yield('js')
