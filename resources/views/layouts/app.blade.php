@@ -86,18 +86,10 @@
         <script src="{{ url('/') }}/assets/js/jquery.min.js"></script>
         <script src="{{ url('/') }}/assets/js/bootstrap.bundle.min.js"></script>
         <script src="{{ url('/') }}/assets/js/jquery.easing.min.js"></script>
-        <script src="{{ url('/') }}/assets/js/scrollspy.min.js"></script>
         <!-- custom js -->
         <script src="{{ url('/') }}/assets/js/app.js"></script>
-        <script src="{{ url('/') }}/js/jquery.scrollbar.min.js"></script>
         <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5f2a9f204211fc0012520e87&product=sop' async='async'></script>
-        <script>
-            jQuery(document).ready(function(){
-                jQuery('.scrollbar-dynamic').scrollbar();
-                let images = $('img');
-                lazyload(images);
-            });
-        </script>
+
         <script src="{{ asset('js/prism.js') }}"></script>
         <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
         @yield('js')
