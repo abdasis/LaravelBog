@@ -725,6 +725,7 @@ header {
     border: 6px solid #F0F2F5;
     object-fit: cover;
     object-position: center;
+    z-index: 999;
 }
 
 .logo-group {
@@ -832,3 +833,4 @@ body::-webkit-scrollbar-thumb {
     line-height: 30px !important;
     margin-bottom: 0 !important;
 }
+
