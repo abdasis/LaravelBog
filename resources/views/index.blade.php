@@ -25,7 +25,9 @@ Saya Software Engineer berasal dari Indonesia, dengan bahasa pemrograman utama P
             <div class="col-md-4 col-sm-6">
                 <div class="card">
                     @if ($post->thumbnail_artikel  && file_exists(public_path('thumbnail-artikel') . '/' . $post->thumbnail_artikel))
-                    <img class="card-img-top img-post-thumbnail-small" src="{{ asset('thumbnail-artikel/') .'/'.$post->thumbnail_artikel }}" alt="Card image cap">
+                        <a href="{{ asset('thumbnail-artikel/') .'/'.$post->thumbnail_artikel }}" class="progressive replace card-img-top img-post-thumbnail">
+                            <img src="{{ asset('thumbnail-artikel/') .'/'.$post->thumbnail_artikel }}" class="preview card-img-top img-post-thumbnail" alt="image" />
+                        </a>
                     @else
                     <img class="card-img-top img-post-thumbnail-small" src="{{ asset('assets/images/patient_forms_drib.jpg') }}" alt="Card image cap">
                     @endif
@@ -54,9 +56,10 @@ Saya Software Engineer berasal dari Indonesia, dengan bahasa pemrograman utama P
                 <div class="col-md-4">
                     <div class="card">
                         @if ($post->thumbnail_artikel  && file_exists(public_path('thumbnail-artikel') . '/' . $post->thumbnail_artikel))
-<a href="{{ asset('thumbnail-artikel/') .'/'.$post->thumbnail_artikel }}" class="progressive replace card-img-top img-post-thumbnail">
-                        <img src="{{ asset('thumbnail-artikel/') .'/'.$post->thumbnail_artikel }}" class="preview card-img-top img-post-thumbnail" alt="image" />
-                    </a>                        @else
+                        <a href="{{ asset('thumbnail-artikel/') .'/'.$post->thumbnail_artikel }}" class="progressive replace card-img-top img-post-thumbnail">
+                            <img src="{{ asset('thumbnail-artikel/') .'/'.$post->thumbnail_artikel }}" class="preview card-img-top img-post-thumbnail" alt="image" />
+                        </a>
+                        @else
                         <img class="card-img-top img-post-thumbnail-small" src="{{ asset('assets/images/patient_forms_drib.jpg') }}" alt="Card image cap">
                         @endif
                         <div class="card-body">
