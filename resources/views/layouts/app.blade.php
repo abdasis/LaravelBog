@@ -51,17 +51,6 @@
         <!-- Custom  sCss -->
         <link rel="stylesheet" type="text/css" href="{{ url('/') }}/assets/css/style.css" />
         <link rel="stylesheet" type="text/css" href="{{ url('/') }}/css/jquery.scrollbar.css" />
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172404660-2"></script>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172404660-3"></script>
-
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'UA-172404660-3');
-        </script>
     </head>
 
     <body>
@@ -88,7 +77,8 @@
         <script src="{{ url('/') }}/assets/js/jquery.easing.min.js"></script>
         <!-- custom js -->
         <script src="{{ url('/') }}/assets/js/app.js"></script>
-        <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5f2a9f204211fc0012520e87&product=sop' async='async'></script>
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5f09333631fdfe6a"></script>
 
         <script src="{{ asset('js/prism.js') }}"></script>
         <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>

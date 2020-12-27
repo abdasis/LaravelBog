@@ -48,9 +48,9 @@
 
                     <div class="card-body">
                         <h4 class="text-center">Jika dirasa artikel ini bermanfaat yuk bagikan ke temanmu!</h4>
-                            <!-- ShareThis BEGIN -->
-                            <div class="sharethis-inline-share-buttons"></div>
-                            <!-- ShareThis END -->
+                        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                        <div class="addthis_inline_share_toolbox"></div>
+
                     </div>
                 </div>
 
