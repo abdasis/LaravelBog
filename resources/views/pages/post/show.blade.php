@@ -46,8 +46,8 @@
 
 
 
-                    <div class="card-body">
-                        <h4 class="text-center">Jika dirasa artikel ini bermanfaat yuk bagikan ke temanmu!</h4>
+                    <div class="card-body text-center">
+                        <h4>Jika dirasa artikel ini bermanfaat yuk bagikan ke temanmu!</h4>
                         <!-- Go to www.addthis.com/dashboard to customize your tools -->
                         <div class="addthis_inline_share_toolbox"></div>
 
