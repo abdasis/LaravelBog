@@ -96,7 +96,7 @@ $(document).ready(function() {
         file_picker_types: "image",
         codesample_global_prismjs: true,
         image_class_list: [
-            {title: 'Full width', value: 'img-fluid img-responsive img-thumbnail'},
+            {title: 'Full width', value: 'img-fluid img-responsive preview'},
             {title: 'Bootstrap', value: 'w-100'},
         ],
         plugins: [

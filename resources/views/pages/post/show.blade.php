@@ -29,12 +29,14 @@
                     </div>
 
                     @if ($post->thumbnail_artikel  && file_exists(public_path('thumbnail-artikel') . '/' . $post->thumbnail_artikel))
-                    <img class="card-img-top img-post-thumbnail" src="{{ asset('thumbnail-artikel/') .'/'.$post->thumbnail_artikel }}" alt="Card image cap">
+                    <a href="{{ asset('thumbnail-artikel/') .'/'.$post->thumbnail_artikel }}" class="progressive replace card-img-top img-post-thumbnail">
+                        <img src="{{ asset('thumbnail-artikel/') .'/'.$post->thumbnail_artikel }}" class="preview card-img-top img-post-thumbnail" alt="image" />
+                    </a>
                     @else
                     <img class="card-img-top img-post-thumbnail" src="{{ asset('assets/images/patient_forms_drib.jpg') }}" alt="Card image cap">
                     @endif
 
-                    <img src="{{ asset('/assets/images/asis.jpeg') }}" alt="" class="img-profil align-self-center rounded-circle">
+                     <img src="{{ asset('/assets/images/asis.jpeg') }}" loading="lazy" class="preview img-profil align-self-center rounded-circle" alt="image" />
 
                     <div class="card-body">
                         <div class="card-text">

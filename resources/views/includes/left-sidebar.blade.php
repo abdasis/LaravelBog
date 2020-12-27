@@ -1,7 +1,6 @@
 <div class="col-md-4 col-sm-12">
     <div class="card mt-3 shadow-md">
-        <img src="{{ asset('/assets/images/asis.jpeg') }}" alt="" class="img-profil align-self-center rounded-circle">
-        <div class="card-title text-center pb-0">
+<img src="{{ asset('/assets/images/asis.jpeg') }}" loading="lazy" class="preview img-profil align-self-center rounded-circle" alt="image" />        <div class="card-title text-center pb-0">
             <h3 class="mb-0">Abd. Asis <span class="text-blue"><i class="mdi mdi-check-circle"></i></span></h3>
             <p class="text-muted">Tukang Ketik</p>
         </div>
